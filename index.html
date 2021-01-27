@@ -4,30 +4,34 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>Text Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 </head>
 
-<body>
-    <nav>
-        <a href="index.html">Text</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="table.html">Table</a>
-    </nav>
-    <form action="submit">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" value="Timothy"> <br>
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" value="Yuan"> <br>
-        <input type="submit" value="Submit">
+<body onload="selected('index')">
+    <div id="nav-bar"></div>
+    <script type="text/javascript">
+        $(function(){
+        $('#nav-bar').load('navbar.html');
+        });
+    </script>
+    <div class="center">
+        <form action="submit">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" value="Timothy"> <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" value="Yuan"> <br>
+            <input type="submit" value="Submit">
 
-        <h3>Gender</h3>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-    </form>
+            <h3>Gender</h3>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </form>
+    </div>
 </body>
 
 

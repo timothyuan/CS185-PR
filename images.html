@@ -4,25 +4,67 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>Images Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 </head>
 
-<body>
-    <nav>
-        <a href="index.html">Text</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="table.html">Table</a>
-    </nav>
+<body onload="selected('images')">
+    <div id="nav-bar"></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nav-bar').load('navbar.html');
+        });
+    </script>
     <div class="grid-container">
-        <div class="grid-item"><img src="images/lake.jpeg"></div>
-        <div class="grid-item"><img src="images/beach.jpeg"></div>
-        <div class="grid-item"><img src="images/lights.jpeg"></div>
-        <div class="grid-item"><img src="images/city.jpeg"></div>
-        <div class="grid-item"><img src="images/sunset.jpeg"></div>
-        <div class="grid-item"><img src="images/waterfall.jpeg"></div>
+        <div><img src="images/lake.jpeg" onclick="openImage('images/lake.jpeg')"></div>
+        <div><img src="images/beach.jpeg" onclick="openImage('images/beach.jpeg')"></div>
+        <div><img src="images/lights.jpeg" onclick="openImage('images/lights.jpeg')"></div>
+        <div><img src="images/sunset.jpeg" onclick="openImage('images/sunset.jpeg')"></div>
+        <div><img src="images/waterfall.jpeg" onclick="openImage('images/waterfall.jpeg')"></div>
+        <div><img src="images/city.jpeg" onclick="openImage('images/city.jpeg')"></div> 
+        <div><img src="images/lake.jpeg" onclick="openImage('images/lake.jpeg')"></div>
+        <div><img src="images/beach.jpeg" onclick="openImage('images/beach.jpeg')"></div>
+        <div><img src="images/lights.jpeg" onclick="openImage('images/lights.jpeg')"></div>
+        <div><img src="images/sunset.jpeg" onclick="openImage('images/sunset.jpeg')"></div>
+        <div><img src="images/waterfall.jpeg" onclick="openImage('images/waterfall.jpeg')"></div>
+        <div><img src="images/city.jpeg" onclick="openImage('images/city.jpeg')"></div> 
+        <div><img src="images/lake.jpeg" onclick="openImage('images/lake.jpeg')"></div>
+        <div><img src="images/beach.jpeg" onclick="openImage('images/beach.jpeg')"></div>
+        <div><img src="images/lights.jpeg" onclick="openImage('images/lights.jpeg')"></div>
+        <div><img src="images/sunset.jpeg" onclick="openImage('images/sunset.jpeg')"></div>
+        <div><img src="images/waterfall.jpeg" onclick="openImage('images/waterfall.jpeg')"></div>
+        <div><img src="images/city.jpeg" onclick="openImage('images/city.jpeg')"></div> 
+        <div><img src="images/lake.jpeg" onclick="openImage('images/lake.jpeg')"></div>
+        <div><img src="images/beach.jpeg" onclick="openImage('images/beach.jpeg')"></div>
+        <div><img src="images/lights.jpeg" onclick="openImage('images/lights.jpeg')"></div>
+        <div><img src="images/sunset.jpeg" onclick="openImage('images/sunset.jpeg')"></div>
+        <div><img src="images/waterfall.jpeg" onclick="openImage('images/waterfall.jpeg')"></div>
+        <div><img src="images/city.jpeg" onclick="openImage('images/city.jpeg')"></div> 
     </div>
+    <div id="imageModal" class="modal">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <div class="modal-content">
+                <img id="modal-image" style="width:100%">
+            </div>
+        </div>
+        
+    <button onclick="topFunction()" id="btt" class="btt" title="Go to top">Top</button>
+
+    <script>
+        var btt = document.getElementById('btt');
+        window.onscroll = function() {
+            if (document.body.scrollTop > vh(25) || document.documentElement.scrollTop > vh(25)) {
+                btt.style.display = "block";
+            } else {
+                btt.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
-
-
 
 </html>

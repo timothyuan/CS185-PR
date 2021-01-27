@@ -4,21 +4,50 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>Videos Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 </head>
 
-<body>
-    <nav>
-        <a href="index.html">Text</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="table.html">Table</a>
-    </nav>
+<body onload="selected('videos')">
+    <div id="nav-bar"></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nav-bar').load('navbar.html');
+        });
+    </script>
     <div class="grid-container">
-        <iframe class="video" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video" src="https://www.youtube.com/embed/P5_xgip67ac" frameborder="0" allowfullscreen></iframe>
+        <div>
+            <video width="320" height="240" controls>
+                <source src="videos/1.mp4" onclick="openVideo('videos/1.mp4')" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+                <video width="320" height="240" onclick="openVideo('videos/1.mp4')" controls>
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        </div>
+        <div>
+                <video width="320" height="240" onclick="openVideo('videos/1.mp4')" controls>
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        </div>
+        <div>
+                <video width="320" height="240" onclick="openVideo('videos/1.mp4')" controls>
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        </div>
+    </div>  
+    <div id="videoModal" class="modal" style="text-align: center" >
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <video id="modal-video" width="640" height="480" controls>
+                Your browser does not support the video tag.
+            </video>
     </div>
 </body>
-
 
 
 </html>
