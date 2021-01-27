@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Email Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="selected('email')">
+    <div id="nav-bar"></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nav-bar').load('navbar.html');
+        });
+    </script>
+    <div class="center">
+        <form>
+            <label for="emailInput">E-mail:</label>
+            <input type="text" id="emailInput"><br><br>
+            <input type="button" value="Submit" onclick="validateEmail()">
+        </form>
+    </div>
+    <div class="center">
+        <p id="alert" style="display:none"></p>
+    </div>
+</body>
+
+
+</html>
